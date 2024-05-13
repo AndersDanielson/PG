@@ -12,9 +12,9 @@ public class Lab {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		
-		File indata = new File("C:\\Users\\Anders\\eclipse-workspace\\ProgramVaruutvärdering\\src\\data1.txt");
-		Scanner scan = new Scanner(indata);
-		File hej = new File("C:\\Users\\Anders\\Documents\\result1.txt");
+		
+		Scanner scan = new Scanner(new File(args[0]);
+		
 		
 		
 		ArrayList<Long> treeSortTime = new ArrayList<Long>();
@@ -40,7 +40,7 @@ public class Lab {
 		Search s = new Search(tree.size());
 		ListSorter l = new ListSorter();
 		
-		for(int i = 0; i < 600; i++) {
+		for(int i = 0; i < Integer.valueOf(args[2]; i++) {
 			treeSortTime.add(l.TreeSort(tree));
 			treeSearchTime.add(s.treeSearch(tree));
 			linkedSortTime.add(l.LinkedSort(linked));
@@ -51,7 +51,7 @@ public class Lab {
 		}
 		
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(hej));
+			BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
 			writer.write("Runnumbre,	TreeSortTime,       TreeSearchTime,      linkedSortTime,       linkedSearchTime,      listSearchTime,      listMergeSortTime      \n");
 			for(int i = 0; i < treeSortTime.size(); i++) {
 				String output =i+1 + " 	 ,      " + Long.toString(treeSortTime.get(i)) + "  	,	  " + Long.toString(treeSearchTime.get(i))
