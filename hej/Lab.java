@@ -1,4 +1,4 @@
-package hej;
+
 
 import java.io.*;
 import java.util.ArrayList;
