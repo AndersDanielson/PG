@@ -1,4 +1,4 @@
-package hej;
+
 
 import java.util.LinkedList;
 import java.util.List;
